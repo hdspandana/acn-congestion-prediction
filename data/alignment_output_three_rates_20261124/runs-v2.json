@@ -1,0 +1,124 @@
+{
+    "runs":  [
+                 {
+                     "bottleneck_rate_bps":  5000000.0,
+                     "run_id":  "pilot_python_20261024_165350",
+                     "file":  "aligned/run-0001.csv",
+                     "metadata":  {
+                                      "clock_review":  {
+                                                           "router_offset_to_endpoint_seconds":  "0"
+                                                       },
+                                      "timestamp_transform":  {
+                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792841031.571320"
+                                                              },
+                                      "aligned_data_sha256":  "b4db51b1ad5aa43f6934ad88409512bcbe6cc4cf88d44ce78fa55dfd50392f50",
+                                      "source_streams":  {
+                                                             "router":  {
+                                                                            "sha256":  "e6134e67367e04b5bb7b819bad0c8c1e53d586630b93b46e2eaa8bbf89458888",
+                                                                            "file":  "pilot_python_20261024_165350/qdisc_trace.csv"
+                                                                        }
+                                                         }
+                                  }
+                 },
+                 {
+                     "bottleneck_rate_bps":  5000000.0,
+                     "run_id":  "pilot_python_20261024_171151",
+                     "file":  "aligned/run-0002.csv",
+                     "metadata":  {
+                                      "clock_review":  {
+                                                           "router_offset_to_endpoint_seconds":  "0"
+                                                       },
+                                      "timestamp_transform":  {
+                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792842113.122949"
+                                                              },
+                                      "aligned_data_sha256":  "8f86b3610e999eb17d0328f9938149aeb201f60c8693c368fb2e663914774353",
+                                      "source_streams":  {
+                                                             "router":  {
+                                                                            "sha256":  "dd8ed48ee98e4cac6a23828a315bfe3acd5804d6628888101d0e193fca1199f8",
+                                                                            "file":  "pilot_python_20261024_171151/qdisc_trace.csv"
+                                                                        }
+                                                         }
+                                  }
+                 },
+                 {
+                     "bottleneck_rate_bps":  5000000.0,
+                     "run_id":  "pilot_python_20261024_172454",
+                     "file":  "aligned/run-0003.csv",
+                     "metadata":  {
+                                      "clock_review":  {
+                                                           "router_offset_to_endpoint_seconds":  "0"
+                                                       },
+                                      "timestamp_transform":  {
+                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792842896.555082"
+                                                              },
+                                      "aligned_data_sha256":  "fab84598e2f0e0c6216d821779d2957a58441f5639abb5cf029b48ffebe2c78a",
+                                      "source_streams":  {
+                                                             "router":  {
+                                                                            "sha256":  "838b5ac21e80fca90fb967a45c5440529d7cc8c239fa15bf37a2ad74d2e23a52",
+                                                                            "file":  "pilot_python_20261024_172454/qdisc_trace.csv"
+                                                                        }
+                                                         }
+                                  }
+                 },
+                 {
+                     "bottleneck_rate_bps":  5000000.0,
+                     "run_id":  "pilot_python_20261024_173453",
+                     "file":  "aligned/run-0004.csv",
+                     "metadata":  {
+                                      "clock_review":  {
+                                                           "router_offset_to_endpoint_seconds":  "0"
+                                                       },
+                                      "timestamp_transform":  {
+                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792843495.676230"
+                                                              },
+                                      "aligned_data_sha256":  "c1fe7c7b6f34186b6ee2c1914329d0f748191621cb10ff19b03953ea7f76c134",
+                                      "source_streams":  {
+                                                             "router":  {
+                                                                            "sha256":  "6a2e37c30a91ace11044b1e260d3b3cdbb2188dfeba37fe4ce2646636f947d01",
+                                                                            "file":  "pilot_python_20261024_173453/qdisc_trace.csv"
+                                                                        }
+                                                         }
+                                  }
+                 },
+                 {
+                     "bottleneck_rate_bps":  5000000.0,
+                     "run_id":  "pilot_python_20261024_202442",
+                     "file":  "aligned/run-0005.csv",
+                     "metadata":  {
+                                      "clock_review":  {
+                                                           "router_offset_to_endpoint_seconds":  "0"
+                                                       },
+                                      "timestamp_transform":  {
+                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792853711.531511"
+                                                              },
+                                      "aligned_data_sha256":  "ef91c2b48d3fd3264ed060e3ccc7c81779d8416e18adb9b19e318d7fd09f5282",
+                                      "source_streams":  {
+                                                             "router":  {
+                                                                            "sha256":  "679fae000887a2615f7e37280be1145df009b78c65ecaa9a99b77e566da1b566",
+                                                                            "file":  "pilot_python_20261024_202442/qdisc_trace.csv"
+                                                                        }
+                                                         }
+                                  }
+                 },
+                 {
+                     "bottleneck_rate_bps":  5000000.0,
+                     "run_id":  "pilot_python_20261101_234715",
+                     "file":  "aligned/run-0006.csv",
+                     "metadata":  {
+                                      "clock_review":  {
+                                                           "router_offset_to_endpoint_seconds":  "0"
+                                                       },
+                                      "timestamp_transform":  {
+                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1793557037.645051"
+                                                              },
+                                      "aligned_data_sha256":  "59b45169ceb3c16f00e73eb1727e145d2d6c0abfba139c7f604d57c8f7dacf10",
+                                      "source_streams":  {
+                                                             "router":  {
+                                                                            "sha256":  "e5afdb17d24d073cbcefdd034a9d667f3c308eebe14d0bea56c6acf0c5c9424c",
+                                                                            "file":  "pilot_python_20261101_234715/qdisc_trace.csv"
+                                                                        }
+                                                         }
+                                  }
+                 }
+             ]
+}
