@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acn-congestion-prediction"
+version = "0.2.0"
+description = "Reproducible research tools for endpoint-based network queue-event forecasting"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "ACN congestion prediction project" }]
+dependencies = []
+
+[project.optional-dependencies]
+ml = ["scikit-learn>=1.2,<2"]
+web = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.20,<1"]
+# `web-ml` installs the web API and optional sklearn estimators for real candidates.
+web-ml = ["fastapi>=0.115,<1", "uvicorn>=0.30,<1", "python-multipart>=0.0.20,<1", "scikit-learn>=1.2,<2"]
+# Legacy Streamlit console only; the supported product UI is React + FastAPI.
+legacy-ui = ["streamlit>=1.37,<2", "plotly>=5.24,<7"]
+test = ["pytest>=8,<9", "httpx>=0.27,<1", "fastapi>=0.115,<1", "python-multipart>=0.0.20,<1", "scikit-learn>=1.2,<2"]
+# Pin Ruff so local and CI lint/format semantics do not drift with new releases.
+dev = ["pytest>=8,<9", "httpx>=0.27,<1", "fastapi>=0.115,<1", "python-multipart>=0.0.20,<1", "scikit-learn>=1.2,<2", "ruff==0.17.2"]
+
+[project.scripts]
+acn = "acn_congestion.cli:main"
+acn-web = "acn_congestion.web_api:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+include-package-data = true
+
+[tool.setuptools.package-data]
+acn_congestion = ["web_static/**/*"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint.per-file-ignores]
+# These parser helpers deliberately preserve a stable ValueError contract for
+# booleans. Callers in processing/preflight convert ValueError into domain
+# errors; silently changing only boolean inputs to TypeError would bypass
+# those safeguards. Keep the exception type stable unless every caller and
+# the public error contract are migrated together.
+"src/acn_congestion/labels.py" = ["TRY004"]
+"src/acn_congestion/parsing.py" = ["TRY004"]

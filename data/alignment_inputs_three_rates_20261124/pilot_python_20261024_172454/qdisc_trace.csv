@@ -1,0 +1,310 @@
+wall_time,monotonic_seconds,elapsed_seconds,phase,sent_bytes,sent_packets,dropped_packets,overlimits,delta_sent_packets,delta_dropped_packets,delta_overlimits,backlog_bytes,backlog_packets,raw_qdisc
+1792842896.5545802,76759.16943695,0.073390,idle,37738703,25521,105,8959,,,,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37738703 bytes 25521 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842896.8182132,76759.433070267,0.337024,idle,37738899,25523,105,8959,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37738899 bytes 25523 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842897.100436,76759.715292611,0.619246,idle,37738997,25524,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37738997 bytes 25524 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842897.3044603,76759.919317352,0.823271,idle,37739095,25525,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739095 bytes 25525 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842897.6665447,76760.281400671,1.185354,idle,37739291,25527,105,8959,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739291 bytes 25527 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842897.7985,76760.413356949,1.317310,idle,37739389,25528,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739389 bytes 25528 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842898.0896833,76760.704540236,1.608494,idle,37739487,25529,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739487 bytes 25529 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842898.3100216,76760.924878867,1.828832,idle,37739585,25530,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739585 bytes 25530 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842898.5296988,76761.144555546,2.048509,idle,37739683,25531,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739683 bytes 25531 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842898.8734915,76761.488348016,2.392301,idle,37739879,25533,105,8959,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739879 bytes 25533 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842899.1388154,76761.753672058,2.657625,idle,37739977,25534,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37739977 bytes 25534 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842899.2842333,76761.899090462,2.803044,idle,37740075,25535,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740075 bytes 25535 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842899.5678282,76762.182685023,3.086638,idle,37740173,25536,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740173 bytes 25536 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842899.8116004,76762.42645733,3.330411,idle,37740271,25537,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740271 bytes 25537 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842900.0599422,76762.674799579,3.578753,idle,37740467,25539,105,8959,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740467 bytes 25539 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842900.2954762,76762.910332885,3.814286,idle,37740565,25540,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740565 bytes 25540 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842900.534514,76763.149371072,4.053324,idle,37740663,25541,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740663 bytes 25541 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842900.8655941,76763.480450003,4.384403,idle,37740761,25542,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740761 bytes 25542 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842901.0916262,76763.70648314,4.610436,idle,37740957,25544,105,8959,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37740957 bytes 25544 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842901.2908795,76763.905735925,4.809689,idle,37741055,25545,105,8959,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37741055 bytes 25545 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842901.5516684,76764.166525577,5.070479,load,37741227,25547,105,8959,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37741227 bytes 25547 pkt (dropped 105, overlimits 8959 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842901.7912652,76764.406122259,5.310076,load,37917153,25673,118,9070,126,13,111,59046,23,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 37917153 bytes 25673 pkt (dropped 118, overlimits 9070 requeues 0) 
+ backlog 59046b 23p requeues 0"
+1792842902.0558286,76764.670685557,5.574639,load,38082277,25783,126,9239,110,8,169,63588,20,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38082277 bytes 25783 pkt (dropped 126, overlimits 9239 requeues 0) 
+ backlog 63588b 20p requeues 0"
+1792842902.2849014,76764.899758498,5.803712,load,38224691,25878,127,9369,95,1,130,59046,16,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38224691 bytes 25878 pkt (dropped 127, overlimits 9369 requeues 0) 
+ backlog 59046b 16p requeues 0"
+1792842902.5431428,76765.157999822,6.061953,load,38380731,25982,127,9504,104,0,135,47032,10,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38380731 bytes 25982 pkt (dropped 127, overlimits 9504 requeues 0) 
+ backlog 47032b 10p requeues 0"
+1792842902.7789822,76765.393839214,6.297793,load,38532327,26084,127,9589,102,0,85,49962,9,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38532327 bytes 26084 pkt (dropped 127, overlimits 9589 requeues 0) 
+ backlog 49962b 9p requeues 0"
+1792842903.0604503,76765.67530736,6.579261,load,38708049,26201,127,9688,117,0,99,51476,9,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38708049 bytes 26201 pkt (dropped 127, overlimits 9688 requeues 0) 
+ backlog 51476b 9p requeues 0"
+1792842903.2999604,76765.914817543,6.818771,load,38861061,26303,127,9762,102,0,74,53088,9,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38861061 bytes 26303 pkt (dropped 127, overlimits 9762 requeues 0) 
+ backlog 53088b 9p requeues 0"
+1792842903.531477,76766.146333788,7.050287,load,38994391,26392,127,9814,89,0,52,56116,8,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 38994391 bytes 26392 pkt (dropped 127, overlimits 9814 requeues 0) 
+ backlog 56116b 8p requeues 0"
+1792842903.787791,76766.4026479,7.306601,load,39164155,26506,127,9878,114,0,64,57532,7,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 39164155 bytes 26506 pkt (dropped 127, overlimits 9878 requeues 0) 
+ backlog 57532b 7p requeues 0"
+1792842904.0396616,76766.654518233,7.558472,load,39318681,26609,127,9939,103,0,61,60560,7,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 39318681 bytes 26609 pkt (dropped 127, overlimits 9939 requeues 0) 
+ backlog 60560b 7p requeues 0"
+1792842904.2844875,76766.899344536,7.803298,load,39464123,26706,127,9982,97,0,43,62074,6,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 39464123 bytes 26706 pkt (dropped 127, overlimits 9982 requeues 0) 
+ backlog 62074b 6p requeues 0"
+1792842904.5303361,76767.145193212,8.049147,load,39627733,26815,127,10035,109,0,53,63686,7,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 39627733 bytes 26815 pkt (dropped 127, overlimits 10035 requeues 0) 
+ backlog 63686b 7p requeues 0"
+1792842904.8170867,76767.431943269,8.335897,load,39802039,26932,128,10084,117,1,49,46934,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 39802039 bytes 26932 pkt (dropped 128, overlimits 10084 requeues 0) 
+ backlog 46934b 3p requeues 0"
+1792842905.070399,76767.685256083,8.589209,load,39945967,27028,128,10111,96,0,27,25738,2,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 39945967 bytes 27028 pkt (dropped 128, overlimits 10111 requeues 0) 
+ backlog 25738b 2p requeues 0"
+1792842905.3142285,76767.929085263,8.833039,load,40103521,27133,128,10140,105,0,29,54504,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 40103521 bytes 27133 pkt (dropped 128, overlimits 10140 requeues 0) 
+ backlog 54504b 3p requeues 0"
+1792842905.5388043,76768.15366145,9.057615,load,40242907,27226,128,10166,93,0,26,57630,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 40242907 bytes 27226 pkt (dropped 128, overlimits 10166 requeues 0) 
+ backlog 57630b 4p requeues 0"
+1792842905.843775,76768.458632085,9.362585,load,40418727,27344,128,10194,118,0,28,60560,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 40418727 bytes 27344 pkt (dropped 128, overlimits 10194 requeues 0) 
+ backlog 60560b 3p requeues 0"
+1792842906.054966,76768.669822955,9.573776,load,40568711,27444,128,10216,100,0,22,62074,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 40568711 bytes 27444 pkt (dropped 128, overlimits 10216 requeues 0) 
+ backlog 62074b 3p requeues 0"
+1792842906.2797976,76768.894654661,9.798608,load,40692957,27527,128,10235,83,0,19,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 40692957 bytes 27527 pkt (dropped 128, overlimits 10235 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842906.5391335,76769.153990246,10.057944,load,40853539,27634,128,10260,107,0,25,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 40853539 bytes 27634 pkt (dropped 128, overlimits 10260 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842906.7824082,76769.39726515,10.301218,load,41012607,27740,129,10288,106,1,28,45518,5,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41012607 bytes 27740 pkt (dropped 129, overlimits 10288 requeues 0) 
+ backlog 45518b 5p requeues 0"
+1792842907.0659533,76769.680810529,10.584764,load,41203567,27868,129,10325,128,0,37,51476,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41203567 bytes 27868 pkt (dropped 129, overlimits 10325 requeues 0) 
+ backlog 51476b 3p requeues 0"
+1792842907.2805765,76769.895433717,10.799387,load,41332355,27954,129,10347,86,0,22,54504,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41332355 bytes 27954 pkt (dropped 129, overlimits 10347 requeues 0) 
+ backlog 54504b 3p requeues 0"
+1792842907.5712118,76770.186068601,11.090022,load,41495965,28063,129,10371,109,0,24,57630,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41495965 bytes 28063 pkt (dropped 129, overlimits 10371 requeues 0) 
+ backlog 57630b 3p requeues 0"
+1792842907.7821648,76770.397021215,11.300975,load,41639893,28159,129,10387,96,0,16,57630,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41639893 bytes 28159 pkt (dropped 129, overlimits 10387 requeues 0) 
+ backlog 57630b 3p requeues 0"
+1792842908.0342152,76770.649072142,11.553025,load,41788363,28258,129,10403,99,0,16,60658,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41788363 bytes 28258 pkt (dropped 129, overlimits 10403 requeues 0) 
+ backlog 60658b 3p requeues 0"
+1792842908.2877135,76770.902570869,11.806524,load,41941473,28361,129,10422,103,0,19,62074,2,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 41941473 bytes 28361 pkt (dropped 129, overlimits 10422 requeues 0) 
+ backlog 62074b 2p requeues 0"
+1792842908.5348287,76771.14968565,12.053639,load,42099027,28466,129,10445,105,0,23,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 42099027 bytes 28466 pkt (dropped 129, overlimits 10445 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842908.774807,76771.389664227,12.293618,load,42258095,28572,130,10468,106,1,23,62172,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 42258095 bytes 28572 pkt (dropped 130, overlimits 10468 requeues 0) 
+ backlog 62172b 3p requeues 0"
+1792842909.0586617,76771.673517357,12.577471,load,42426345,28685,130,10504,113,0,36,48448,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 42426345 bytes 28685 pkt (dropped 130, overlimits 10504 requeues 0) 
+ backlog 48448b 3p requeues 0"
+1792842909.3070827,76771.921939724,12.825893,load,42599039,28800,130,10535,115,0,31,52990,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 42599039 bytes 28800 pkt (dropped 130, overlimits 10535 requeues 0) 
+ backlog 52990b 3p requeues 0"
+1792842909.531016,76772.145873172,13.049827,load,42738425,28893,130,10560,93,0,25,56018,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 42738425 bytes 28893 pkt (dropped 130, overlimits 10560 requeues 0) 
+ backlog 56018b 3p requeues 0"
+1792842909.7829218,76772.39777858,13.301732,load,42894465,28997,130,10586,104,0,26,59144,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 42894465 bytes 28997 pkt (dropped 130, overlimits 10586 requeues 0) 
+ backlog 59144b 4p requeues 0"
+1792842910.0554228,76772.670279935,13.574233,load,43055047,29104,130,10611,107,0,25,60658,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43055047 bytes 29104 pkt (dropped 130, overlimits 10611 requeues 0) 
+ backlog 60658b 4p requeues 0"
+1792842910.29267,76772.907526476,13.811480,load,43211185,29209,130,10636,105,0,25,62074,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43211185 bytes 29209 pkt (dropped 130, overlimits 10636 requeues 0) 
+ backlog 62074b 3p requeues 0"
+1792842910.549863,76773.164719138,14.068672,load,43365711,29312,130,10658,103,0,22,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43365711 bytes 29312 pkt (dropped 130, overlimits 10658 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842910.781929,76773.396786062,14.300739,load,43511153,29409,131,10681,97,1,23,34920,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43511153 bytes 29409 pkt (dropped 131, overlimits 10681 requeues 0) 
+ backlog 34920b 3p requeues 0"
+1792842911.032522,76773.647378671,14.551332,load,43661137,29509,131,10716,100,0,35,47032,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43661137 bytes 29509 pkt (dropped 131, overlimits 10716 requeues 0) 
+ backlog 47032b 4p requeues 0"
+1792842911.2812853,76773.896142512,14.800096,load,43832415,29624,131,10747,115,0,31,51476,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43832415 bytes 29624 pkt (dropped 131, overlimits 10747 requeues 0) 
+ backlog 51476b 3p requeues 0"
+1792842911.5333152,76774.148172419,15.052126,load,43991483,29730,131,10775,106,0,28,56018,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 43991483 bytes 29730 pkt (dropped 131, overlimits 10775 requeues 0) 
+ backlog 56018b 3p requeues 0"
+1792842911.7959065,76774.41076371,15.314717,load,44135411,29826,131,10801,96,0,26,59144,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 44135411 bytes 29826 pkt (dropped 131, overlimits 10801 requeues 0) 
+ backlog 59144b 4p requeues 0"
+1792842912.056429,76774.671286041,15.575239,load,44314259,29946,131,10829,120,0,28,60560,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 44314259 bytes 29946 pkt (dropped 131, overlimits 10829 requeues 0) 
+ backlog 60560b 3p requeues 0"
+1792842912.3124468,76774.927303866,15.831257,load,44473327,30052,131,10854,106,0,25,62074,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 44473327 bytes 30052 pkt (dropped 131, overlimits 10854 requeues 0) 
+ backlog 62074b 3p requeues 0"
+1792842912.5430837,76775.157940944,16.061894,load,44599087,30136,131,10873,84,0,19,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 44599087 bytes 30136 pkt (dropped 131, overlimits 10873 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842912.770403,76775.385259976,16.289213,load,44752099,30238,132,10895,102,1,22,37850,2,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 44752099 bytes 30238 pkt (dropped 132, overlimits 10895 requeues 0) 
+ backlog 37850b 2p requeues 0"
+1792842913.0377984,76775.652655006,16.556608,load,44911167,30344,132,10923,106,0,28,47032,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 44911167 bytes 30344 pkt (dropped 132, overlimits 10923 requeues 0) 
+ backlog 47032b 4p requeues 0"
+1792842913.2877705,76775.902627783,16.806581,load,45056707,30442,132,10947,98,0,24,51476,2,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45056707 bytes 30442 pkt (dropped 132, overlimits 10947 requeues 0) 
+ backlog 51476b 2p requeues 0"
+1792842913.5237486,76776.138605745,17.042559,load,45214261,30547,132,10969,105,0,22,52990,2,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45214261 bytes 30547 pkt (dropped 132, overlimits 10969 requeues 0) 
+ backlog 52990b 2p requeues 0"
+1792842913.791702,76776.40655885,17.310512,load,45353647,30640,132,10991,93,0,22,57532,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45353647 bytes 30640 pkt (dropped 132, overlimits 10991 requeues 0) 
+ backlog 57532b 3p requeues 0"
+1792842914.0476546,76776.662511365,17.566465,load,45529369,30757,132,11020,117,0,29,60658,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45529369 bytes 30757 pkt (dropped 132, overlimits 11020 requeues 0) 
+ backlog 60658b 4p requeues 0"
+1792842914.2829592,76776.897816104,17.801769,load,45677839,30856,132,11042,99,0,22,62172,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45677839 bytes 30856 pkt (dropped 132, overlimits 11042 requeues 0) 
+ backlog 62172b 4p requeues 0"
+1792842914.552078,76777.16693471,18.070888,load,45837005,30963,132,11067,107,0,25,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45837005 bytes 30963 pkt (dropped 132, overlimits 11067 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842914.7794526,76777.394309347,18.298263,load,45993045,31067,132,11089,104,0,22,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 45993045 bytes 31067 pkt (dropped 132, overlimits 11089 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842915.063644,76777.678501159,18.582455,load,46167253,31183,133,11125,116,1,36,47032,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 46167253 bytes 31183 pkt (dropped 133, overlimits 11125 requeues 0) 
+ backlog 47032b 4p requeues 0"
+1792842915.2920687,76777.906925587,18.810879,load,46312695,31280,133,11153,97,0,28,51574,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 46312695 bytes 31280 pkt (dropped 133, overlimits 11153 requeues 0) 
+ backlog 51574b 4p requeues 0"
+1792842915.5498137,76778.164670455,19.068624,load,46470347,31386,133,11181,106,0,28,54504,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 46470347 bytes 31386 pkt (dropped 133, overlimits 11181 requeues 0) 
+ backlog 54504b 3p requeues 0"
+1792842915.8008678,76778.415724683,19.319678,load,46617303,31484,133,11206,98,0,25,57532,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 46617303 bytes 31484 pkt (dropped 133, overlimits 11206 requeues 0) 
+ backlog 57532b 3p requeues 0"
+1792842916.0447497,76778.659606675,19.563560,load,46764259,31582,133,11231,98,0,25,59046,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 46764259 bytes 31582 pkt (dropped 133, overlimits 11231 requeues 0) 
+ backlog 59046b 3p requeues 0"
+1792842916.2690592,76778.883915965,19.787869,load,46914243,31682,133,11254,100,0,23,62172,4,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 46914243 bytes 31682 pkt (dropped 133, overlimits 11254 requeues 0) 
+ backlog 62172b 4p requeues 0"
+1792842916.532557,76779.147414013,20.051367,load,47070381,31787,133,11279,105,0,25,63588,3,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47070381 bytes 31787 pkt (dropped 133, overlimits 11279 requeues 0) 
+ backlog 63588b 3p requeues 0"
+1792842916.7894044,76779.404261658,20.308215,load,47229586,31895,135,11304,108,2,25,22776,2,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47229586 bytes 31895 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 22776b 2p requeues 0"
+1792842917.029115,76779.643971589,20.547925,load,47252460,31912,135,11304,17,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47252460 bytes 31912 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842917.3029673,76779.917824561,20.821778,recovery,47253312,31919,135,11304,7,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253312 bytes 31919 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842917.5355306,76780.15038699,21.054340,recovery,47253410,31920,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253410 bytes 31920 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842917.7825198,76780.397376883,21.301330,recovery,47253508,31921,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253508 bytes 31921 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842918.0358462,76780.650703125,21.554656,recovery,47253606,31922,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253606 bytes 31922 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842918.2898355,76780.904692543,21.808646,recovery,47253704,31923,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253704 bytes 31923 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842918.5275807,76781.142437438,22.046391,recovery,47253900,31925,135,11304,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253900 bytes 31925 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842918.776598,76781.391454829,22.295408,recovery,47253998,31926,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47253998 bytes 31926 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842919.0308006,76781.645657456,22.549611,recovery,47254096,31927,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254096 bytes 31927 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842919.2803326,76781.895189253,22.799143,recovery,47254194,31928,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254194 bytes 31928 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842919.5313191,76782.146175671,23.050129,recovery,47254292,31929,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254292 bytes 31929 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842919.7791493,76782.394006203,23.297960,recovery,47254488,31931,135,11304,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254488 bytes 31931 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842920.0582926,76782.673149481,23.577103,recovery,47254586,31932,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254586 bytes 31932 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842920.2821352,76782.896992311,23.800946,recovery,47254684,31933,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254684 bytes 31933 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842920.5331655,76783.148022527,24.051976,recovery,47254782,31934,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254782 bytes 31934 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842920.7776983,76783.392555127,24.296508,recovery,47254978,31936,135,11304,2,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47254978 bytes 31936 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842921.0280426,76783.642899673,24.546853,recovery,47255076,31937,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47255076 bytes 31937 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842921.2835577,76783.898415,24.802368,recovery,47255174,31938,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47255174 bytes 31938 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842921.5370998,76784.151956143,25.055909,recovery,47255272,31939,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47255272 bytes 31939 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842921.7770224,76784.391879336,25.295833,recovery,47255370,31940,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47255370 bytes 31940 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
+1792842922.0628047,76784.677661984,25.581615,recovery,47255468,31941,135,11304,1,0,0,0,0,"qdisc tbf 8003: root refcnt 5 rate 5Mbit burst 32Kb lat 50ms 
+ Sent 47255468 bytes 31941 pkt (dropped 135, overlimits 11304 requeues 0) 
+ backlog 0b 0p requeues 0"
