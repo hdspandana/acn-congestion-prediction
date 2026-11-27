@@ -277,15 +277,4 @@ button:disabled { opacity: .48; cursor: not-allowed; }
 @media (max-width: 900px) { .model-stage-note { flex-wrap:wrap; } .model-stage-note>div { flex-basis:calc(50% - 16px); } }
 @media (max-width: 650px) { .model-stage-note { display:grid; grid-template-columns:1fr; } .model-stage-note>svg { display:none; } .model-stage-note>div { grid-template-columns:auto 1fr; } }
 
-.pilot-prediction { width: 100%; max-width: 850px; padding: 20px; }
-.pilot-prediction .step-content { min-width: 0; }
-.pilot-prediction .prediction-table-wrap { max-height: 360px; overflow: auto; }
-.pilot-upload { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; margin-block: 16px 8px; }
-.pilot-file { display: grid; gap: 6px; font-weight: 600; max-width: 100%; }
-.pilot-file input { font: inherit; max-width: 100%; }
-.pilot-hint { margin-block: 8px; }
-.pilot-error { padding: 10px 12px; border-inline-start: 3px solid #d98b50; margin-block: 12px; }
-.pilot-results { margin-block: 12px; }
-.registry-prediction { margin-block: 16px; }
-.registry-prediction > summary { cursor: pointer; font-weight: 600; padding: 10px 0; }
-.registry-prediction > summary span { font-weight: 400; margin-inline-start: 8px; }
+.pilot-results .chart-wrap { height: 230px; min-width: 0; margin-block: 12px; }

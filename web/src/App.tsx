@@ -1,4 +1,7 @@
 /// <reference types="vite/client" />
+import pilotEvidence from './pilot-warning-evidence.json'
+import freshEvidence from './fresh-test-evidence.json'
+import freshRtt from './fresh-test-rtt.csv?raw'
 import heldOutRtt from './held-out-rtt.csv?raw'
 import React, { useEffect, useMemo, useState } from 'react'
 import {
@@ -236,18 +239,25 @@ function TelemetryChart({ data, field }: { data: TelemetrySeries; field: string 
 
 function PilotPrediction() {
   const [file, setFile] = useState<File | null>(null)
-  const [result, setResult] = useState<{training_rows: number; predictions: {timestamp_seconds: number; score: number}[]} | null>(null)
+  const [result, setResult] = useState<{training_rows: number; coverage?: {input_rows: number; missing_rtt_rows: number; sampling_gaps: number}; cutoff?: number | null; predictions: {timestamp_seconds: number; rtt_ms?: number; score: number}[]} | null>(null)
+  const [model, setModel] = useState('expanded')
+  const shortWindow = model !== 'original'
+  const [bundled, setBundled] = useState<'bundled' | 'fresh' | null>(null)
+  const [inputName, setInputName] = useState('')
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
 
-  async function predict(input: File) {
+  async function predict(input: File, replay: typeof bundled = null) {
+    setBundled(replay)
+    setInputName(input.name)
     setBusy(true)
     setError('')
     setResult(null)
     const body = new FormData()
     body.append('file', input)
     try {
-      const response = await fetch('/api/v1/predictions/pilot', {method: 'POST', body})
+      const response = await fetch('/api/v1/predictions/pilot' + (model === 'original' ? '' :
+        model === 'short' ? '?short_window=true' : `?candidate=${model}`), {method: 'POST', body})
       const data = await response.json()
       if (!response.ok) throw new Error(data.error?.message ?? 'Pilot prediction failed.')
       setResult(data)
@@ -258,10 +268,74 @@ function PilotPrediction() {
     }
   }
 
+  const firstTime = result?.predictions[0]?.timestamp_seconds ?? 0
+  const cutoff = shortWindow ? result?.cutoff ?? null : pilotEvidence.threshold
+  const observed = (bundled === 'fresh' ? freshEvidence.observed : pilotEvidence.observed) as Record<string, number | undefined>
+  const rows = (result?.predictions ?? []).map(row => ({
+    ...row,
+    elapsed: row.timestamp_seconds - firstTime,
+    warning: cutoff !== null && row.score >= cutoff,
+    warningScore: cutoff !== null && row.score >= cutoff ? row.score : null,
+    actual: bundled ? observed[String(Math.round(row.timestamp_seconds * 1000))] : undefined,
+  }))
+  const warnings = rows.filter(row => row.warning)
+  const confirmed = warnings.find(row => row.actual === 1)
+  const hasOnset = rows.some(row => row.actual === 1)
+  const falseWarnings = warnings.filter(row => row.actual === 0).length
+  const unknownWarnings = warnings.filter(row => row.actual === undefined).length
+  const warningCount = warnings.length
+  const rttRange = rows.reduce<{min: number; max: number} | null>((range, row) => {
+    if (row.rtt_ms == null) return range
+    return range ? {min: Math.min(range.min, row.rtt_ms), max: Math.max(range.max, row.rtt_ms)} :
+      {min: row.rtt_ms, max: row.rtt_ms}
+  }, null)
+  const freshOnset = freshEvidence.onset.map(time => time - firstTime)
+  const freshQueue = freshEvidence.queue.map(([time, delay]) => ({elapsed: time - firstTime, delay}))
+  const timelineDomain = [Math.min(0, freshQueue[0].elapsed), Math.max(rows.at(-1)?.elapsed ?? 0, freshQueue.at(-1)!.elapsed)]
+  const test = pilotEvidence.held_out
+  const coverage = result?.coverage
+
+  function downloadForecasts() {
+    const header = 'timestamp_seconds,elapsed_seconds,rtt_ms,model,score,warning_cutoff,forecast_next_second,observed_outcome'
+    const csv = [header, ...rows.map(row => [
+      row.timestamp_seconds, row.elapsed, row.rtt_ms, model, row.score, cutoff,
+      cutoff === null ? 'score_only' : row.warning ? 'possible_queue_buildup' : 'no_warning',
+      row.actual === 1 ? 'congestion_began' : row.actual === 0 ? 'no_new_congestion' : 'unknown',
+    ].join(','))].join('\r\n')
+    const url = URL.createObjectURL(new Blob([csv], {type: 'text/csv;charset=utf-8'}))
+    const link = document.createElement('a')
+    link.href = url
+    link.download = 'acn-forecast-results.csv'
+    link.click()
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000)
+  }
+
   return <section className="panel predict-flow pilot-prediction" aria-label="Kali pilot prediction">
     <div className="step-content">
       <h3>Kali pilot model</h3>
       <p>Forecast sustained queue buildup one second ahead using endpoint RTT.</p>
+      <label>
+        Model{' '}
+        <select disabled={busy} value={model}
+          onChange={event => {setModel(event.target.value); setResult(null); setError('')}}>
+          <option value="original">Original logistic regression</option>
+          <option value="short">Three-reading logistic regression (6 training runs)</option>
+          <option value="expanded">Three-reading logistic regression (11 training runs)</option>
+          <option value="relative">Baseline-relative logistic regression (11 training runs)</option>
+        </select>
+      </label>
+      <details>
+        <summary>Fresh 9 Mbit/s evaluation</summary>
+        <p>Cutoffs chosen at 3 Mbit/s. The five test runs were held out from training and cutoff selection.</p>
+        <div className="prediction-table-wrap"><table className="prediction-table">
+          <thead><tr><th>Model</th><th>Onsets caught</th><th>False warnings</th></tr></thead>
+          <tbody>
+            <tr><td>Three readings, 6 training runs</td><td>2 / 5</td><td>20 / 184</td></tr>
+            <tr><td>Three readings, 11 training runs</td><td>3 / 5</td><td>31 / 184</td></tr>
+            <tr><td>Baseline-relative, 11 training runs</td><td>0 / 5</td><td>10 / 184</td></tr>
+          </tbody>
+        </table></div>
+      </details>
       <div className="pilot-upload">
         <label className="pilot-file">
           <span>Endpoint RTT CSV</span>
@@ -271,24 +345,101 @@ function PilotPrediction() {
         <button className="button button-primary" disabled={!file || busy} onClick={() => { if (file) void predict(file) }}>
           {busy ? 'Scoring…' : 'Run pilot prediction'}
         </button>
+      </div>
+      <details>
+        <summary>Optional lab examples with router measurements</summary>
+        <p>Use these recordings to see how warnings are checked against measured queue buildup.</p>
         <button className="button" type="button" disabled={busy}
-          onClick={() => void predict(new File([heldOutRtt], 'endpoint_ping.csv', {type: 'text/csv'}))}>
+          onClick={() => void predict(new File([heldOutRtt], 'endpoint_ping.csv', {type: 'text/csv'}), 'bundled')}>
           Run bundled demo
         </button>
-      </div>
+        <button className="button" type="button" disabled={busy}
+          onClick={() => void predict(new File([freshRtt], '9mbit-test-rtt.csv', {type: 'text/csv'}), 'fresh')}>
+          Run 9 Mbit/s test example
+        </button>
+      </details>
       <p className="pilot-hint">Use <code>timestamp_seconds</code> and <code>rtt_ms</code> with readings
-        at most 0.5 seconds apart. The bundled demo uses an endpoint-only trace from the held-out 7 Mbit/s run.</p>
+        at most 0.5 seconds apart. The three-reading models need three consecutive valid readings to start scoring.</p>
       {error && <div className="pilot-error" role="alert">{error}
-        {error.startsWith('No usable RTT pairs') && ' Click Run bundled demo to score the compatible held-out trace.'}
       </div>}
       {result && <div className="pilot-results" aria-live="polite">
-        <p>{result.predictions.length} forecast scores · {result.training_rows} training timestamps.
-          Scores have no calibrated alert threshold.</p>
-        <details><summary>View forecast scores</summary>
-          <div className="prediction-table-wrap"><table className="prediction-table"><thead><tr><th>Input time (s)</th><th>Model score</th></tr></thead><tbody>
-            {result.predictions.map(row => <tr key={row.timestamp_seconds}>
-              <td>{row.timestamp_seconds.toFixed(3)}</td><td>{row.score.toFixed(4)}</td>
-            </tr>)}
+        <h4>{cutoff === null ? 'Scores only' : warningCount ? 'The model warned of possible queue buildup' : 'The model raised no warnings'}</h4>
+        <p><strong>{bundled === 'fresh' ? '9 Mbit/s test example' : bundled ? '7 Mbit/s bundled replay' : inputName}</strong>
+          {warningCount > 0 && ` · First warning at ${warnings[0].elapsed.toFixed(3)} s after the first forecast. Each warning looks one second ahead.`}
+        </p>
+        {bundled ? <>
+          <p><strong>{hasOnset ? confirmed ? 'The model warned in time for the measured onset.' : cutoff === null ? 'The router recorded one onset. This model produced scores only.' : 'The router recorded one onset that the model missed.' : 'No onset could be matched to a scored forecast window.'}</strong>
+            {cutoff !== null && ` False warnings: ${falseWarnings}. Warnings without enough evidence: ${unknownWarnings}.`}
+          </p>
+          {bundled === 'fresh' && confirmed && <p>The first matching warning came {(freshEvidence.onset[0] - confirmed.timestamp_seconds).toFixed(2)}–{(freshEvidence.onset[1] - confirmed.timestamp_seconds).toFixed(2)} s before the measured onset interval.</p>}
+        </> : <p><strong>What happened on the router is unknown.</strong> This upload contains endpoint RTT only. A matching router queue trace is needed to confirm whether congestion began. A quiet forecast can still miss an onset.</p>}
+        {rttRange && <p>Across the scored readings, ping round-trip time ranged from {rttRange.min.toFixed(2)} to {rttRange.max.toFixed(2)} ms.</p>}
+        <p>{warningCount} of {result.predictions.length} forecast timestamps raised a warning. Nearby warnings may refer to the same possible event.</p>
+        {coverage && <p><strong>File coverage:</strong> Scored {rows.length} of {coverage.input_rows} readings.
+          {rows.length < coverage.input_rows && ' A reading needs enough uninterrupted RTT history before it can be scored.'}
+          {coverage.missing_rtt_rows > 0 && ` Missing RTT values: ${coverage.missing_rtt_rows}.`}
+          {coverage.sampling_gaps > 0 && ` Gaps over 0.5 seconds: ${coverage.sampling_gaps}.`}
+        </p>}
+        <button className="button" type="button" onClick={downloadForecasts}><Download size={15}/>Download forecast CSV</button>
+        <details><summary>Model details</summary>
+        <p>Model fitted on {result.training_rows} labeled timestamps.
+          {cutoff === null ? 'No validation cutoff met the warning budget with an active warning.'
+            : ` Provisional cutoff ${cutoff.toFixed(6)}, selected on 3 Mbit/s validation data.`}</p>
+        {shortWindow ? <p>The cutoff limits warnings on negative validation timestamps to 10%.
+          See the fresh evaluation above for measured test performance.</p> : <p><strong>High false-warning rate.</strong> On the previously examined {test.rate_mbit} Mbit/s test,
+          the cutoff warned ahead of {test.onsets_caught}/{test.onsets_total} measured onsets and
+          warned at {test.false_warning_timestamps}/{test.negative_timestamps} negative timestamps.</p>}
+        </details>
+        <section aria-label="Forecast timeline"><h4>Timeline for this file</h4>
+          <p>Elapsed seconds from the first scored reading. {bundled === 'fresh' && 'Shading marks the measured onset interval. The vertical dashed line marks the first matching warning, when present.'}</p>
+          {rttRange && <>
+            <p><strong>Measured ping time (ms)</strong> · RTT readings at the scored timestamps.</p>
+            <div className="chart-wrap"><ResponsiveContainer width="100%" height="100%">
+              <ComposedChart data={rows}>
+                <XAxis type="number" dataKey="elapsed" domain={bundled === 'fresh' ? timelineDomain : ['dataMin', 'dataMax']} tickFormatter={value => `${Number(value).toFixed(1)} s`}/>
+                <YAxis width={72}/>
+                <Tooltip labelFormatter={value => `${Number(value).toFixed(3)} s`}/>
+                <Line dataKey="rtt_ms" name="Measured RTT (ms)" stroke="#60A5FA" dot={rows.length === 1} isAnimationActive={false}/>
+              </ComposedChart>
+            </ResponsiveContainer></div>
+          </>}
+          <p><strong>Model score</strong> · Amber dots mark warnings. The dashed horizontal line is the warning cutoff.</p>
+          <div className="chart-wrap"><ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={rows}>
+              <XAxis type="number" dataKey="elapsed" domain={bundled === 'fresh' ? timelineDomain : ['dataMin', 'dataMax']} tickFormatter={value => `${Number(value).toFixed(1)} s`}/>
+              <YAxis width={72} tickFormatter={value => Number(value).toFixed(3)}/>
+              <Tooltip labelFormatter={value => `${Number(value).toFixed(3)} s`}/>
+              {cutoff !== null && <ReferenceLine y={cutoff} stroke="#FFB454" strokeDasharray="5 4"/>}
+              {bundled === 'fresh' && <ReferenceArea x1={freshOnset[0]} x2={freshOnset[1]} fill="#2DD4BF" fillOpacity={0.22}/>}
+              <Line dataKey="score" name="Model score" stroke="#2DD4BF" dot={rows.length === 1} isAnimationActive={false}/>
+              <Line dataKey="warningScore" name="Warning score" stroke="none" dot={{r: 3, fill: "#FFB454", stroke: "none"}} isAnimationActive={false}/>
+            </ComposedChart>
+          </ResponsiveContainer></div>
+          {bundled === 'fresh' && <div className="chart-wrap"><ResponsiveContainer width="100%" height="100%">
+            <ComposedChart data={freshQueue}>
+              <XAxis type="number" dataKey="elapsed" domain={timelineDomain}/>
+              <YAxis width={72}/>
+              <Tooltip labelFormatter={value => `${Number(value).toFixed(3)} s`}/>
+              <ReferenceArea x1={freshOnset[0]} x2={freshOnset[1]} fill="#2DD4BF" fillOpacity={0.22}/>
+              {confirmed && <ReferenceLine x={confirmed.elapsed} stroke="#FFB454" strokeDasharray="5 4"/>}
+              <Line dataKey="delay" name="Router queue delay proxy (ms)" stroke="#60A5FA" dot={false} isAnimationActive={false}/>
+            </ComposedChart>
+          </ResponsiveContainer></div>}
+        </section>
+        <details><summary>View forecast scores and decisions</summary>
+          <div className="prediction-table-wrap"><table className="prediction-table"><thead><tr>
+            <th>Elapsed time (s)</th><th>Model score</th><th>Forecast within 1 s</th>
+            {bundled && <th>Observed afterward</th>}
+          </tr></thead><tbody>
+            {rows.map(row => {
+              const {actual, warning} = row
+              return <tr key={row.timestamp_seconds}>
+                <td>{(row.timestamp_seconds - firstTime).toFixed(3)}</td>
+                <td>{row.score.toFixed(6)}</td>
+                <td>{cutoff === null ? 'Score only' : warning ? 'Possible queue buildup' : 'No warning'}</td>
+                {bundled && <td>{actual === 1 ? 'Congestion began' : actual === 0 ? 'No new congestion' : 'Outcome unknown'}</td>}
+              </tr>
+            })}
           </tbody></table></div>
         </details>
       </div>}

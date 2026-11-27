@@ -1,7 +1,7 @@
 """Fit and score the ACN exploratory pilot separately from the model registry."""
 from functools import lru_cache
 from io import StringIO
-from math import isfinite
+from math import exp, isfinite
 import csv
 import hashlib
 import json
@@ -16,6 +16,7 @@ from sklearn.preprocessing import StandardScaler
 
 MAX_GAP = 0.5
 HORIZON = 1.0
+VALIDATION_WARNING_LIMIT = 0.10
 
 
 def read_verified_csv(root, relative, digest):
@@ -47,11 +48,12 @@ def classify(anchor, times, states):
 
 
 
-def endpoint_features(rows, columns):
+def endpoint_features(rows, columns, *, short_window=False, coverage=None):
     required = {"timestamp_seconds", "rtt_ms"}
     if not required.issubset(columns) or len(columns) != len(set(columns)):
         raise ValueError("CSV requires unique timestamp_seconds and rtt_ms columns.")
     previous = None
+    preceding_pair = None
     for row in rows:
         if None in row or any(row[key] is None for key in required):
             raise ValueError("CSV contains malformed telemetry rows.")
@@ -59,25 +61,35 @@ def endpoint_features(rows, columns):
         rtt = float(row["rtt_ms"]) if row["rtt_ms"].strip() else None
         if not isfinite(time) or (rtt is not None and (rtt < 0 or not isfinite(rtt))):
             raise ValueError("Use finite timestamps and nonnegative RTT in milliseconds.")
+        if coverage is not None:
+            coverage["input_rows"] += 1
+            coverage["missing_rtt_rows"] += rtt is None
         if previous is not None:
             prior_time, prior_rtt = previous
             if time <= prior_time:
                 raise ValueError("Timestamps must be strictly increasing.")
+            if coverage is not None and time - prior_time > MAX_GAP:
+                coverage["sampling_gaps"] += 1
             if time - prior_time <= MAX_GAP and rtt is not None and prior_rtt is not None:
-                yield time, (rtt, rtt - prior_rtt)
+                features = (rtt, rtt - prior_rtt)
+                if not short_window:
+                    yield time, features
+                elif preceding_pair is not None:
+                    yield time, (*features, rtt - preceding_pair)
+                preceding_pair = prior_rtt
+            else:
+                preceding_pair = None
         previous = time, rtt
 
 
-@lru_cache(maxsize=2)
-def fit_pilot(project_root):
+def labeled_pilot_rows(project_root, rate_bps, *, short_window=False):
     data = project_root / "data"
     aligned = data / "alignment_output_three_rates_20261124"
     sources = data / "alignment_inputs_three_rates_20261124"
     manifest = json.loads((aligned / "runs-v2.json").read_text(encoding="utf-8"))
-    features, labels = [], []
     for run in manifest["runs"]:
         rate = run["bottleneck_rate_bps"]
-        if rate != 5_000_000:
+        if rate != rate_bps:
             continue
         metadata = run["metadata"]
         origin = Decimal(metadata["timestamp_transform"][
@@ -97,11 +109,17 @@ def fit_pilot(project_root):
         )
         path = run["file"]
         rows = read_verified_csv(aligned, path, metadata["aligned_data_sha256"])
-        for anchor, values in endpoint_features(rows, list(rows[0]) if rows else []):
-            label, _ = classify(anchor, times, states)
+        for anchor, values in endpoint_features(rows, list(rows[0]) if rows else [], short_window=short_window):
+            label, onset = classify(anchor, times, states)
             if label is not None:
-                features.append(values)
-                labels.append(label)
+                yield values, label, (run["run_id"], onset) if onset else None
+
+
+@lru_cache(maxsize=4)
+def fit_pilot(project_root, *, short_window=False):
+    rows = list(labeled_pilot_rows(project_root, 5_000_000, short_window=short_window))
+    features = [values for values, _, _ in rows]
+    labels = [label for _, label, _ in rows]
     if set(labels) != {0, 1}:
         raise ValueError("The pilot training traces do not contain both forecast classes.")
     model = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000))
@@ -109,17 +127,62 @@ def fit_pilot(project_root):
     return model, len(labels)
 
 
-def predict_pilot(project_root: Path, payload: bytes):
+def select_cutoff(rows, scores):
+    negative_scores = sorted(
+        (score for (_, label, _), score in zip(rows, scores) if label == 0),
+        reverse=True,
+    )
+    if not negative_scores:
+        raise ValueError("Validation needs negative timestamps for the warning budget.")
+    allowed = int(VALIDATION_WARNING_LIMIT * len(negative_scores))
+    boundary = negative_scores[allowed]
+    return min((score for score in scores if score > boundary), default=None)
+
+
+@lru_cache(maxsize=2)
+def short_window_cutoff(project_root):
+    model, _ = fit_pilot(project_root, short_window=True)
+    rows = list(labeled_pilot_rows(project_root, 3_000_000, short_window=True))
+    scores = model.predict_proba([features for features, _, _ in rows])[:, 1]
+    return select_cutoff(rows, scores)
+
+
+def predict_pilot(project_root: Path, payload: bytes, *, short_window=False, candidate=None):
+    short_window = short_window or candidate is not None
     reader = csv.DictReader(StringIO(payload.decode("utf-8-sig")), strict=True)
-    rows = list(endpoint_features(reader, reader.fieldnames or []))
+    coverage = {"input_rows": 0, "missing_rtt_rows": 0, "sampling_gaps": 0}
+    rows = list(endpoint_features(
+        reader, reader.fieldnames or [], short_window=short_window, coverage=coverage
+    ))
     if not rows:
+        if short_window:
+            raise ValueError("The short-window model needs three consecutive RTT readings with gaps of at most 0.5 seconds.")
         raise ValueError("No usable RTT pairs. Consecutive readings must be at most 0.5 seconds apart.")
-    model, count = fit_pilot(project_root)
-    scores = model.predict_proba([values for _, values in rows])[:, 1]
+    if candidate is None:
+        model, count = fit_pilot(project_root, short_window=short_window)
+        scores = model.predict_proba([values for _, values in rows])[:, 1]
+        cutoff = short_window_cutoff(project_root) if short_window else None
+    else:
+        from .frozen_pilot import PARAMETERS
+
+        mean, scale, coefficients, intercept, cutoff = PARAMETERS[candidate]
+        count = 450
+        scores = []
+        for _, (rtt, delta, two_step_delta) in rows:
+            level = max(0, delta, two_step_delta) if candidate == "relative" else rtt
+            values = (level, delta, two_step_delta)
+            z = intercept + sum(
+                weight * ((value - center) / spread)
+                for value, center, spread, weight in zip(values, mean, scale, coefficients)
+            )
+            probability = 1 / (1 + exp(-z)) if z >= 0 else exp(z) / (1 + exp(z))
+            scores.append(probability)
     return {
         "training_rows": count,
+        "coverage": coverage,
+        **({"cutoff": cutoff} if short_window else {}),
         "predictions": [
-            {"timestamp_seconds": time, "score": float(score)}
-            for (time, _), score in zip(rows, scores)
+            {"timestamp_seconds": time, "rtt_ms": values[0], "score": float(score)}
+            for (time, values), score in zip(rows, scores)
         ],
     }

@@ -1887,7 +1887,7 @@ def create_app(service: WebService | None = None) -> FastAPI:
             raise APIProblem(422, "prediction_failed", str(exc)) from exc
 
     @app.post(f"{API_PREFIX}/predictions/pilot", summary="Score RTT with the exploratory Kali pilot")
-    async def pilot_prediction(request: Request, file: Annotated[UploadFile, File()]):
+    async def pilot_prediction(request: Request, file: Annotated[UploadFile, File()], short_window: bool = False, candidate: Literal["expanded", "relative"] | None = None):
         from starlette.concurrency import run_in_threadpool
 
         _check_upload_request_size(request)
@@ -1899,7 +1899,7 @@ def create_app(service: WebService | None = None) -> FastAPI:
         try:
             from .pilot_prediction import predict_pilot
 
-            return await run_in_threadpool(predict_pilot, service.workspace.project_root, payload)
+            return await run_in_threadpool(predict_pilot, service.workspace.project_root, payload, short_window=short_window, candidate=candidate)
         except (ImportError, OSError) as exc:
             raise APIProblem(503, "pilot_unavailable", "Pilot training files or ML dependencies are unavailable.") from exc
         except (ValueError, csv.Error) as exc:

@@ -38,8 +38,8 @@ function installFetch(overrides: { models?: unknown; prediction?: unknown; datas
     if (path.includes('/api/v1/research/ground-truth/series')) return overrides.groundTruthSeries ? json(overrides.groundTruthSeries) : json({ error: { code: 'not_found', message: 'No verified run.' } }, 404)
     if (path.includes('/api/v1/evaluations/')) return overrides.evaluationDetail ? json(overrides.evaluationDetail) : json({ error: { code: 'not_found', message: 'No evaluation.' } }, 404)
     if (path.includes('/api/v1/reports/')) return overrides.reportDetail ? json(overrides.reportDetail) : json({ error: { code: 'not_found', message: 'No report.' } }, 404)
-    if (path.endsWith('/api/v1/predictions/pilot')) return json({
-      training_rows: 252, predictions: [{ timestamp_seconds: 0.2, score: 0.09 }],
+    if (path.endsWith('/api/v1/predictions/pilot?candidate=expanded')) return json({
+      training_rows: 450, cutoff: 0.0991, predictions: [{ timestamp_seconds: 0.4, rtt_ms: 14, score: 0.10 }],
     })
     if (path.endsWith('/api/v1/predictions') && overrides.prediction) return json(overrides.prediction)
     if (path.includes('/api/v1/telemetry/inspect')) return json({
@@ -89,10 +89,13 @@ describe('ACN Network Intelligence operations UI', () => {
     render(<App />)
     await user.click(await screen.findByRole('button', { name: 'Predict congestion' }))
     await user.upload(screen.getByLabelText('Pilot RTT CSV'), new File(
-      ['timestamp_seconds,rtt_ms\n0,12\n0.2,13\n'], 'trace.csv', { type: 'text/csv' },
+      ['timestamp_seconds,rtt_ms\n0,12\n0.2,13\n0.4,14\n'], 'trace.csv', { type: 'text/csv' },
     ))
     await user.click(screen.getByRole('button', { name: 'Run pilot prediction' }))
-    expect(await screen.findByText(/1 forecast scores/)).toBeInTheDocument()
+    expect(await screen.findByText(/1 of 1 forecast timestamps/)).toBeInTheDocument()
+    expect(screen.getByText('What happened on the router is unknown.')).toBeInTheDocument()
+    expect(screen.getByRole('region', { name: 'Forecast timeline' })).toBeInTheDocument()
+    expect(screen.getByText('Measured ping time (ms)')).toBeInTheDocument()
   })
 
   it('runs the bundled endpoint trace without asking for an upload', async () => {
@@ -100,8 +103,9 @@ describe('ACN Network Intelligence operations UI', () => {
     const user = userEvent.setup()
     render(<App />)
     await user.click(await screen.findByRole('button', { name: 'Predict congestion' }))
+    await user.click(screen.getByText('Optional lab examples with router measurements'))
     await user.click(screen.getByRole('button', { name: 'Run bundled demo' }))
-    expect(await screen.findByText(/1 forecast scores/)).toBeInTheDocument()
+    expect(await screen.findByText(/1 of 1 forecast timestamps/)).toBeInTheDocument()
   })
 
   it('renders a malformed ineligible model record without inventing its contract', async () => {

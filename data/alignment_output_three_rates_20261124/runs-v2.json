@@ -1,124 +1,760 @@
 {
-    "runs":  [
-                 {
-                     "bottleneck_rate_bps":  5000000.0,
-                     "run_id":  "pilot_python_20261024_165350",
-                     "file":  "aligned/run-0001.csv",
-                     "metadata":  {
-                                      "clock_review":  {
-                                                           "router_offset_to_endpoint_seconds":  "0"
-                                                       },
-                                      "timestamp_transform":  {
-                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792841031.571320"
-                                                              },
-                                      "aligned_data_sha256":  "b4db51b1ad5aa43f6934ad88409512bcbe6cc4cf88d44ce78fa55dfd50392f50",
-                                      "source_streams":  {
-                                                             "router":  {
-                                                                            "sha256":  "e6134e67367e04b5bb7b819bad0c8c1e53d586630b93b46e2eaa8bbf89458888",
-                                                                            "file":  "pilot_python_20261024_165350/qdisc_trace.csv"
-                                                                        }
-                                                         }
-                                  }
-                 },
-                 {
-                     "bottleneck_rate_bps":  5000000.0,
-                     "run_id":  "pilot_python_20261024_171151",
-                     "file":  "aligned/run-0002.csv",
-                     "metadata":  {
-                                      "clock_review":  {
-                                                           "router_offset_to_endpoint_seconds":  "0"
-                                                       },
-                                      "timestamp_transform":  {
-                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792842113.122949"
-                                                              },
-                                      "aligned_data_sha256":  "8f86b3610e999eb17d0328f9938149aeb201f60c8693c368fb2e663914774353",
-                                      "source_streams":  {
-                                                             "router":  {
-                                                                            "sha256":  "dd8ed48ee98e4cac6a23828a315bfe3acd5804d6628888101d0e193fca1199f8",
-                                                                            "file":  "pilot_python_20261024_171151/qdisc_trace.csv"
-                                                                        }
-                                                         }
-                                  }
-                 },
-                 {
-                     "bottleneck_rate_bps":  5000000.0,
-                     "run_id":  "pilot_python_20261024_172454",
-                     "file":  "aligned/run-0003.csv",
-                     "metadata":  {
-                                      "clock_review":  {
-                                                           "router_offset_to_endpoint_seconds":  "0"
-                                                       },
-                                      "timestamp_transform":  {
-                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792842896.555082"
-                                                              },
-                                      "aligned_data_sha256":  "fab84598e2f0e0c6216d821779d2957a58441f5639abb5cf029b48ffebe2c78a",
-                                      "source_streams":  {
-                                                             "router":  {
-                                                                            "sha256":  "838b5ac21e80fca90fb967a45c5440529d7cc8c239fa15bf37a2ad74d2e23a52",
-                                                                            "file":  "pilot_python_20261024_172454/qdisc_trace.csv"
-                                                                        }
-                                                         }
-                                  }
-                 },
-                 {
-                     "bottleneck_rate_bps":  5000000.0,
-                     "run_id":  "pilot_python_20261024_173453",
-                     "file":  "aligned/run-0004.csv",
-                     "metadata":  {
-                                      "clock_review":  {
-                                                           "router_offset_to_endpoint_seconds":  "0"
-                                                       },
-                                      "timestamp_transform":  {
-                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792843495.676230"
-                                                              },
-                                      "aligned_data_sha256":  "c1fe7c7b6f34186b6ee2c1914329d0f748191621cb10ff19b03953ea7f76c134",
-                                      "source_streams":  {
-                                                             "router":  {
-                                                                            "sha256":  "6a2e37c30a91ace11044b1e260d3b3cdbb2188dfeba37fe4ce2646636f947d01",
-                                                                            "file":  "pilot_python_20261024_173453/qdisc_trace.csv"
-                                                                        }
-                                                         }
-                                  }
-                 },
-                 {
-                     "bottleneck_rate_bps":  5000000.0,
-                     "run_id":  "pilot_python_20261024_202442",
-                     "file":  "aligned/run-0005.csv",
-                     "metadata":  {
-                                      "clock_review":  {
-                                                           "router_offset_to_endpoint_seconds":  "0"
-                                                       },
-                                      "timestamp_transform":  {
-                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1792853711.531511"
-                                                              },
-                                      "aligned_data_sha256":  "ef91c2b48d3fd3264ed060e3ccc7c81779d8416e18adb9b19e318d7fd09f5282",
-                                      "source_streams":  {
-                                                             "router":  {
-                                                                            "sha256":  "679fae000887a2615f7e37280be1145df009b78c65ecaa9a99b77e566da1b566",
-                                                                            "file":  "pilot_python_20261024_202442/qdisc_trace.csv"
-                                                                        }
-                                                         }
-                                  }
-                 },
-                 {
-                     "bottleneck_rate_bps":  5000000.0,
-                     "run_id":  "pilot_python_20261101_234715",
-                     "file":  "aligned/run-0006.csv",
-                     "metadata":  {
-                                      "clock_review":  {
-                                                           "router_offset_to_endpoint_seconds":  "0"
-                                                       },
-                                      "timestamp_transform":  {
-                                                                  "output_origin_seconds_in_endpoint_reference_clock":  "1793557037.645051"
-                                                              },
-                                      "aligned_data_sha256":  "59b45169ceb3c16f00e73eb1727e145d2d6c0abfba139c7f604d57c8f7dacf10",
-                                      "source_streams":  {
-                                                             "router":  {
-                                                                            "sha256":  "e5afdb17d24d073cbcefdd034a9d667f3c308eebe14d0bea56c6acf0c5c9424c",
-                                                                            "file":  "pilot_python_20261101_234715/qdisc_trace.csv"
-                                                                        }
-                                                         }
-                                  }
-                 }
-             ]
+  "runs": [
+    {
+      "bottleneck_rate_bps": 5000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_5mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0001.csv",
+      "metadata": {
+        "aligned_data_sha256": "b4db51b1ad5aa43f6934ad88409512bcbe6cc4cf88d44ce78fa55dfd50392f50",
+        "alignment_exclusions_file": "exclusions/run-0001.jsonl",
+        "alignment_exclusions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "alignment_provenance_file": "provenance/run-0001.jsonl",
+        "alignment_provenance_sha256": "0309b0883c68082b5c8caf8861c79579abdba52fc31f68062b20bb896aa0b0dc",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence.txt",
+          "evidence_sha256": "ef4c4e3fc69e02ab1479c68a8970dcd7b760b610d95170c00d125a7845bb557b",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-08T15:49:50.199846+00:00",
+          "reviewed_by": "human_review_required",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261024_165350/endpoint_ping.csv",
+            "sha256": "77968fef784fac15034e114204f4dfd471f26021b2df9b982683380213e406b3"
+          },
+          "router": {
+            "file": "pilot_python_20261024_165350/qdisc_trace.csv",
+            "sha256": "e6134e67367e04b5bb7b819bad0c8c1e53d586630b93b46e2eaa8bbf89458888"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1792841031.571320",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261024_165350",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 5000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_5mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0002.csv",
+      "metadata": {
+        "aligned_data_sha256": "8f86b3610e999eb17d0328f9938149aeb201f60c8693c368fb2e663914774353",
+        "alignment_exclusions_file": "exclusions/run-0002.jsonl",
+        "alignment_exclusions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "alignment_provenance_file": "provenance/run-0002.jsonl",
+        "alignment_provenance_sha256": "aaab07adf9f8cc276b935976333297132a8ddab6f52917fbdbe1b65cb51d8932",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence.txt",
+          "evidence_sha256": "ef4c4e3fc69e02ab1479c68a8970dcd7b760b610d95170c00d125a7845bb557b",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-08T15:49:50.205356+00:00",
+          "reviewed_by": "human_review_required",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261024_171151/endpoint_ping.csv",
+            "sha256": "601ba48a5a31d9b62a72396056c225f0ac355c2dc0657263c158adb7a6e03500"
+          },
+          "router": {
+            "file": "pilot_python_20261024_171151/qdisc_trace.csv",
+            "sha256": "dd8ed48ee98e4cac6a23828a315bfe3acd5804d6628888101d0e193fca1199f8"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1792842113.122949",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261024_171151",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 5000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_5mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0003.csv",
+      "metadata": {
+        "aligned_data_sha256": "fab84598e2f0e0c6216d821779d2957a58441f5639abb5cf029b48ffebe2c78a",
+        "alignment_exclusions_file": "exclusions/run-0003.jsonl",
+        "alignment_exclusions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "alignment_provenance_file": "provenance/run-0003.jsonl",
+        "alignment_provenance_sha256": "6370d38c9796d3f5b00a71589238cf7b025da8947a7755c272293bf60e3ec6c6",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence.txt",
+          "evidence_sha256": "ef4c4e3fc69e02ab1479c68a8970dcd7b760b610d95170c00d125a7845bb557b",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-08T15:49:50.212111+00:00",
+          "reviewed_by": "human_review_required",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261024_172454/endpoint_ping.csv",
+            "sha256": "53f6923306daa8ba8892be6ccc4f032890fae55ce8561eb91839c4f705b467e5"
+          },
+          "router": {
+            "file": "pilot_python_20261024_172454/qdisc_trace.csv",
+            "sha256": "838b5ac21e80fca90fb967a45c5440529d7cc8c239fa15bf37a2ad74d2e23a52"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1792842896.555082",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261024_172454",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 5000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_5mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0004.csv",
+      "metadata": {
+        "aligned_data_sha256": "c1fe7c7b6f34186b6ee2c1914329d0f748191621cb10ff19b03953ea7f76c134",
+        "alignment_exclusions_file": "exclusions/run-0004.jsonl",
+        "alignment_exclusions_sha256": "348f9b6e80834d131883b95e169375fb802dd6c7a8ccdee34d137e479985952e",
+        "alignment_provenance_file": "provenance/run-0004.jsonl",
+        "alignment_provenance_sha256": "2bcdc1553c5d08da2c577fac3794c2fbee930db2f2a2ff83c693dd283387c900",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence.txt",
+          "evidence_sha256": "ef4c4e3fc69e02ab1479c68a8970dcd7b760b610d95170c00d125a7845bb557b",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-08T15:49:50.217969+00:00",
+          "reviewed_by": "human_review_required",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261024_173453/endpoint_ping.csv",
+            "sha256": "719079edacd89411fd0cf54c5a6ad9699f827399ab1301de2b0d96b0b3d4c73d"
+          },
+          "router": {
+            "file": "pilot_python_20261024_173453/qdisc_trace.csv",
+            "sha256": "6a2e37c30a91ace11044b1e260d3b3cdbb2188dfeba37fe4ce2646636f947d01"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1792843495.676230",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261024_173453",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 5000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_5mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0005.csv",
+      "metadata": {
+        "aligned_data_sha256": "ef91c2b48d3fd3264ed060e3ccc7c81779d8416e18adb9b19e318d7fd09f5282",
+        "alignment_exclusions_file": "exclusions/run-0005.jsonl",
+        "alignment_exclusions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "alignment_provenance_file": "provenance/run-0005.jsonl",
+        "alignment_provenance_sha256": "1b2efc1b24411b0d973e2c9d0cc7fd9867c5e4695db87a3112a97d2aec67d023",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence.txt",
+          "evidence_sha256": "ef4c4e3fc69e02ab1479c68a8970dcd7b760b610d95170c00d125a7845bb557b",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-08T15:49:50.223132+00:00",
+          "reviewed_by": "human_review_required",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261024_202442/endpoint_ping.csv",
+            "sha256": "fa616143c568f9a5035a139c5a1ab01a65bf7125f9a2f974e91b73d674174c8b"
+          },
+          "router": {
+            "file": "pilot_python_20261024_202442/qdisc_trace.csv",
+            "sha256": "679fae000887a2615f7e37280be1145df009b78c65ecaa9a99b77e566da1b566"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1792853711.531511",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261024_202442",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 5000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_5mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0006.csv",
+      "metadata": {
+        "aligned_data_sha256": "59b45169ceb3c16f00e73eb1727e145d2d6c0abfba139c7f604d57c8f7dacf10",
+        "alignment_exclusions_file": "exclusions/run-0006.jsonl",
+        "alignment_exclusions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "alignment_provenance_file": "provenance/run-0006.jsonl",
+        "alignment_provenance_sha256": "b5233d6830281e0ba3a4e002a9e527bce9a98d92e82fddaf4edb08b9bcc34f6d",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence.txt",
+          "evidence_sha256": "ef4c4e3fc69e02ab1479c68a8970dcd7b760b610d95170c00d125a7845bb557b",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-08T15:49:50.228577+00:00",
+          "reviewed_by": "human_review_required",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261101_234715/endpoint_ping.csv",
+            "sha256": "0c388b337aa803ce8cd7a3a563af1505bef7fa6646b0be4305a0b90baaf1dd55"
+          },
+          "router": {
+            "file": "pilot_python_20261101_234715/qdisc_trace.csv",
+            "sha256": "e5afdb17d24d073cbcefdd034a9d667f3c308eebe14d0bea56c6acf0c5c9424c"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1793557037.645051",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261101_234715",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 3000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_3mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0007.csv",
+      "metadata": {
+        "aligned_data_sha256": "a99fe440f42043f8a88075d5de17e0b16e3fabc209c6add1ab3e4619610d74f0",
+        "alignment_exclusions_file": "exclusions/run-0007.jsonl",
+        "alignment_exclusions_sha256": "08ccaaca563505d7a21eba3f7c84a22b461d8726127a2c5920dc16cba47d02d9",
+        "alignment_provenance_file": "provenance/run-0007.jsonl",
+        "alignment_provenance_sha256": "dd43a909a490148da7e78424519d6392c68f2c0568ce795c8bf5ec816c41e36b",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_184734/endpoint_ping.csv",
+            "sha256": "754fce93ecacfb4a6478bf3cb102c6358c57adb0249bea9e1e30c4b082bf598d"
+          },
+          "router": {
+            "file": "pilot_python_20261124_184734/qdisc_trace.csv",
+            "sha256": "f470a67bf5f024d3e53f632fa6ea9a9749526d556d588414d6f2a8081afe6a1b"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795526256.495289",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_184734",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 3000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_3mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0008.csv",
+      "metadata": {
+        "aligned_data_sha256": "17539f2182eb6f4afa5009572d6e26bef5a6e7368bb6a89899707122df7c45a0",
+        "alignment_exclusions_file": "exclusions/run-0008.jsonl",
+        "alignment_exclusions_sha256": "f7b665e898e7466226ad6b5d47f20c590199254f3bea3ef1f3b645039d27fbcc",
+        "alignment_provenance_file": "provenance/run-0008.jsonl",
+        "alignment_provenance_sha256": "b54e25d727bcd486a5102e79394a22790adeda39420fefa48a2e691588f42f5f",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_191552/endpoint_ping.csv",
+            "sha256": "195e65904ca90f188bc7bd347d9eda809282e1c723aa271832de70730d17b12b"
+          },
+          "router": {
+            "file": "pilot_python_20261124_191552/qdisc_trace.csv",
+            "sha256": "497d05f0e33345b3af859dd458f98e08794a14af6800fcb6fe209d6791f969de"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795527953.801341",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_191552",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 3000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_3mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0009.csv",
+      "metadata": {
+        "aligned_data_sha256": "11963c2ea8fbd8b1efdb2a2a9a5c0c3d9642eb0bf80012c99192671e273ffa05",
+        "alignment_exclusions_file": "exclusions/run-0009.jsonl",
+        "alignment_exclusions_sha256": "530f87d6d2cabd9b59c9ce2999ac0e8444fd3248753e9fec9a6e126c207054e9",
+        "alignment_provenance_file": "provenance/run-0009.jsonl",
+        "alignment_provenance_sha256": "1af79353b6b90d006beed038bdb0d77632bce98fe65672db158cc5ead5235afd",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_191620/endpoint_ping.csv",
+            "sha256": "71e736c2982bf636ff15fcd78700d3b10b36b7c005626a10c99e35305cb19bed"
+          },
+          "router": {
+            "file": "pilot_python_20261124_191620/qdisc_trace.csv",
+            "sha256": "c9daea31847a323d404188eed172610b155955c3330593488a43c0169a74d4ac"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795527981.583719",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_191620",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 3000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_3mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0010.csv",
+      "metadata": {
+        "aligned_data_sha256": "d009a7ca34471a528870054a342d4c6346b1c7456ab6cb3edddce692500f82aa",
+        "alignment_exclusions_file": "exclusions/run-0010.jsonl",
+        "alignment_exclusions_sha256": "7692a3f02143a69cbcb223d69e3dd4cde0261ae40a12ea3290e9323ea1e526e4",
+        "alignment_provenance_file": "provenance/run-0010.jsonl",
+        "alignment_provenance_sha256": "06f887d57dda7b68f64a90e65d489c0a69a2f341bee4e49b05fae37363f4802f",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_191647/endpoint_ping.csv",
+            "sha256": "dde5e062d796cb55565f700a463d0c299203092b4889fe4583c919ca2465d4ec"
+          },
+          "router": {
+            "file": "pilot_python_20261124_191647/qdisc_trace.csv",
+            "sha256": "8d93ecaaf0edf38a3e812c5df1993aa6bcc66165eb9b64cdff7b97924a3dc925"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795528009.304985",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_191647",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 7000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_7mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0011.csv",
+      "metadata": {
+        "aligned_data_sha256": "1019f308cc8d98d7858b37287c4675f8ae9cbb961e8b690f713b6e6c2fcd7d31",
+        "alignment_exclusions_file": "exclusions/run-0011.jsonl",
+        "alignment_exclusions_sha256": "a0aba20a10ebf3571741645c1ed86c08483c1a15309bc901bc5d3b451cf78e78",
+        "alignment_provenance_file": "provenance/run-0011.jsonl",
+        "alignment_provenance_sha256": "3a33546e6929b0d636e311db95f63e3ad29f88c5e8124d5c874c35882a74559b",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_185143/endpoint_ping.csv",
+            "sha256": "195943ae092bb371eacdc9849b892b6203be4c31bddabe1ccb77055d0823b020"
+          },
+          "router": {
+            "file": "pilot_python_20261124_185143/qdisc_trace.csv",
+            "sha256": "551411d1e91d64ba3e6400d23ece928ea6b276604cbe8d6ad599a5a2ca2519fe"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795526505.193082",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_185143",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 7000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_7mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0012.csv",
+      "metadata": {
+        "aligned_data_sha256": "37665782286163baae4c052ca0236b6ba77b443ba73a0932d4bd30455eea27a4",
+        "alignment_exclusions_file": "exclusions/run-0012.jsonl",
+        "alignment_exclusions_sha256": "cbd24a4d3a32dd59ba14f218a998bfc744acf831bdceb2d300e221b19493f6a4",
+        "alignment_provenance_file": "provenance/run-0012.jsonl",
+        "alignment_provenance_sha256": "89b7783444313063bd7220428f79df75e4f9112a40eb83216c9d719e605ad8d7",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_191317/endpoint_ping.csv",
+            "sha256": "a62193cb0a0f61494b93a13a4a16704d2af8115a914e4f8af92c069fa2de9d64"
+          },
+          "router": {
+            "file": "pilot_python_20261124_191317/qdisc_trace.csv",
+            "sha256": "7c5e9677efcaa8b59c9a65a4727738317f5261f3450b6c0215c2600c9625700c"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795527798.781438",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_191317",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 7000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_7mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0013.csv",
+      "metadata": {
+        "aligned_data_sha256": "e8d6c8ad34f192755397a617ae50450b902c53e359b5f99f3e8485a204f09ef3",
+        "alignment_exclusions_file": "exclusions/run-0013.jsonl",
+        "alignment_exclusions_sha256": "e7d70e6a6c53f864b3bc196c1a79ae2f0be54b8d697931dc59758b3e4dbda1fc",
+        "alignment_provenance_file": "provenance/run-0013.jsonl",
+        "alignment_provenance_sha256": "946b06234261831677c6843538406ae3fa380350159efb7fa333edb66da958eb",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_191344/endpoint_ping.csv",
+            "sha256": "54ad7824add125d80c9353825bc62e02fcfffe8705d1ebc0aa2e15de9a7bd69b"
+          },
+          "router": {
+            "file": "pilot_python_20261124_191344/qdisc_trace.csv",
+            "sha256": "544afa4e4a9884488158eaf5fb9a0316ccb82d30baeb0af6e6b6c98f4dd4a16c"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795527826.177948",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_191344",
+      "timestamp_unit": "seconds"
+    },
+    {
+      "bottleneck_rate_bps": 7000000.0,
+      "column_map": {
+        "queue_backlog_bytes": "queue_backlog_bytes",
+        "rtt_ms": "rtt_ms",
+        "timestamp": "timestamp_seconds"
+      },
+      "column_units": {
+        "queue_backlog_bytes": "bytes",
+        "rtt_ms": "ms"
+      },
+      "configuration_id": "tbf_7mbit_burst32kb_latency50ms",
+      "file": "aligned/run-0014.csv",
+      "metadata": {
+        "aligned_data_sha256": "942d843fc8ae209fc68a4d74b5d9d0cbf8948abc3c9a71e4dfcb65965c5d27b4",
+        "alignment_exclusions_file": "exclusions/run-0014.jsonl",
+        "alignment_exclusions_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "alignment_provenance_file": "provenance/run-0014.jsonl",
+        "alignment_provenance_sha256": "c88b48b533660a39fe1baf275432c22258a96e0a08879e9170a66bfae74ad5f3",
+        "alignment_spec_sha256": "9ce09d2f1ca2290c2a244ec59a52c73c8856917ec4173edee2ec85fe0bd924c2",
+        "alignment_status": "mechanically_aligned_under_declared_policy; scientific validity not established",
+        "clock_review": {
+          "endpoint_clock_id": "kali_host_system_realtime_clock",
+          "evidence_file": "clock_review_evidence_20261124.txt",
+          "evidence_sha256": "2a90bd19eb824d1e271d389c6d2c529e131d8d7a30a6d1fd20f87489ad31c1d1",
+          "max_unmodeled_drift_seconds": "0",
+          "relation": "same_clock",
+          "residual_uncertainty_seconds": "0",
+          "reviewed_at_utc": "2026-11-24T15:10:00.064566+00:00",
+          "reviewed_by": "s",
+          "router_clock_id": "kali_host_system_realtime_clock",
+          "router_offset_to_endpoint_seconds": "0",
+          "scientific_approval_status": "not_asserted_by_software",
+          "timestamp_semantics": "unix_epoch"
+        },
+        "source_streams": {
+          "endpoint": {
+            "file": "pilot_python_20261124_191412/endpoint_ping.csv",
+            "sha256": "78a5759d6dde155873172ec216cea87d50bf258f150b399960a93a7418873d0c"
+          },
+          "router": {
+            "file": "pilot_python_20261124_191412/qdisc_trace.csv",
+            "sha256": "a24d4ff9a45ae263ab4f484a5566f9c038c1f2cf8f7068129399b10d65cbd941"
+          }
+        },
+        "timestamp_transform": {
+          "output_origin_seconds_in_endpoint_reference_clock": "1795527853.384908",
+          "output_unit": "seconds",
+          "output_value": "corrected endpoint timestamp minus earliest valid corrected endpoint timestamp for this run"
+        }
+      },
+      "run_id": "pilot_python_20261124_191412",
+      "timestamp_unit": "seconds"
+    }
+  ]
 }
